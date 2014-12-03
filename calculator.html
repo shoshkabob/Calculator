@@ -1,0 +1,55 @@
+<html>
+  <head>
+  	<title>Calculator</title>
+  </head>
+    <body>
+    	<input type="text" id="num1">&nbsp;&nbsp;
+    	<input type="text" id="num2">
+    	<br><br>
+    	<button id="plus" onclick="add()">+</button>
+    	<button id="minus" onclick="sub()">-</button>
+    	<button id="times" onclick="mult()">x</button>
+    	<button id="divBy" onclick="div()">&divide;</button>
+    	<br><br>
+    	<input id="answer"></input>
+
+    	<script>
+    		var num1 = parseInt(document.querySelector("#num1").value);
+    		var num2 = parseInt(document.querySelector("#num2").value);
+
+    		var answer = document.querySelector("#answer");
+
+    		function add() {
+    			var num1 = parseInt(document.querySelector("#num1").value);
+    			var num2 = parseInt(document.querySelector("#num2").value);
+    			var result = num1 + num2;
+    			answer.value = result;
+    		}
+    		function sub() {
+    			var num1 = parseInt(document.querySelector("#num1").value);
+    			var num2 = parseInt(document.querySelector("#num2").value);
+    			var result = num1 - num2;
+    			answer.value = result;
+    		}
+    		function mult() {
+    			var num1 = parseInt(document.querySelector("#num1").value);
+    			var num2 = parseInt(document.querySelector("#num2").value);
+    			var result = num1 * num2;
+    			answer.value = result;
+    		}
+    		function div() {
+    			var num1 = parseInt(document.querySelector("#num1").value);
+    			var num2 = parseInt(document.querySelector("#num2").value);
+    			if (num2 === 0) {
+    				answer.value = "UNDEFINED";
+    			}
+    			else {
+    				var result = num1 / num2;
+    				answer.value = result;
+    			}
+    		}
+
+    	</script>
+
+    </body>
+</html>
